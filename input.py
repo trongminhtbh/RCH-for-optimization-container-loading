@@ -21,7 +21,10 @@ class Input:
         for line in lines[2:2+self.ntype]:
             input = line.split()
             data = [float(item) for item in input]
+            feasibleDimentions = [int(data[1]), int(data[3]), int(data[5])]
             tempBlock = Block(data[0],data[2], data[4], data[7])
+            tempBlock.feasibleDimentions = feasibleDimentions
+            tempBlock.taxibility = data[8]
             self.boxes.append(tempBlock)
    ##### generate the constraint     
         self.Top_Bot=np.ones((self.ntype,self.ntype ))

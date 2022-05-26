@@ -13,7 +13,7 @@ def RCH(listBoxes, n):
 
 def main():
     data = Input(0)
-    RCH(data.boxes, 4)
+    RCH(data.boxes, 9)
 
 if __name__ == '__main__':
     main()
