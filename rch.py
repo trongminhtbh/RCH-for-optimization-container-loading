@@ -2,6 +2,7 @@ from preprocessing import processBoxes
 from block import Block
 from input import Input
 from utils import displayBoxes
+from space import space
 import random
 
 def sortBoxes(listBoxes):
@@ -20,7 +21,11 @@ def RCH(listBoxes, n):
 
 def main():
     data = Input(0)
-    RCH(data.boxes, 9)
+    print(data.contdim)
+    # RCH(data.boxes, 9)
+    container = space(0,0,0,data.contdim[0],data.contdim[1],data.contdim[2])
+    container.merge()
+    print(container.remainlist)
 
 if __name__ == '__main__':
     main()
