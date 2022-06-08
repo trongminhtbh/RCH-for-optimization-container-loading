@@ -39,12 +39,11 @@ class space:
         Iw2C3_b=0   # if Space w2 exist like the way defined in paper for case3 b
         
         for s in spacelist:
-            #check to see if the hights are the same
+            #check to see if the heights are the same
             if s.H==self.H and s.pos[2]==self.pos[2]: #to merge two space they should have same height
                 ## First Case 
                 if (s.pos[0]==self.pos[0] and s.L==self.L):
                     if (s.pos[4]==self.pos[1]): #check if the two spaces are neighbors
-                        
                         newspace=self.__class__(s.pos[0],s.pos[1],s.pos[2],s.pos[3],self.pos[4],s.pos[5])
                         lowerBoxType=set( self.lowerBox_type + s.lowerBox_type )
                         lowerBoxType.discard(None)
@@ -205,7 +204,7 @@ class space:
                    
     def __repr__(self):
         return str(self)
-        
+
     @classmethod     
     def curentspace(cls):
         volumes=[s.volume for s in cls.remainlist]

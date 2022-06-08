@@ -24,8 +24,8 @@ def main():
     print(data.contdim)
     # RCH(data.boxes, 9)
     container = space(0,0,0,data.contdim[0],data.contdim[1],data.contdim[2])
-    container.merge()
-    print(container.remainlist)
+    print(data.boxes[1])
+    print(data.boxes[1].Possible_Oriatation(container))
 
 if __name__ == '__main__':
     main()
