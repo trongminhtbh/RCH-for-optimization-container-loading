@@ -44,3 +44,4 @@ class Blok:
         for a in cls.AllBloks:
             a.weight=a.quantity*Data.boxes[a.boxtype,7]
             a.priority=maxpri-Data.boxes[a.boxtype,8]
+        
